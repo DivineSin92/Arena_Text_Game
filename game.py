@@ -24,28 +24,23 @@ while character.hp>0:
 
     #-------------------------easy-fight-------------------------#
     elif road_to == 3:
-      #Fighting.enemy_fight(character, 1)
-      pass
+      Fighting.enemy_fight(character, 1)
 
     #-------------------------hard-fight-------------------------#
     elif road_to == 4:
-      #Fighting.enemy_fight(character, 2)
-      pass
+      Fighting.enemy_fight(character, 2)
 
     #-------------------------boss-fight-------------------------#
     elif road_to == 5:
-      #Fighting.enemy_fight(character, 'boss')
-      pass
+      Fighting.enemy_fight(character, 'boss')
 
     #-------------------------shell-game-------------------------#
     elif road_to == 6:
-      #Shell.game(character)
-      pass
+      Shell.game(character)
 
     #-------------------------shopp-------------------------#
     elif road_to == 7:
-      #Shop.select_shop(character)
-      pass
+      Shop.select_shop(character)
 
     #-------------------------Save-------------------------#
     elif road_to == 8:
