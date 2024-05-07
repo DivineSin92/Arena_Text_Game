@@ -1,16 +1,6 @@
 import random, time
 
 class Texts():
-    def __init__(self, hp, maxhp, dmg, gold, lvl, exp, max_exp, potki):
-        self.hp = hp
-        self.maxhp = maxhp
-        self.dmg = dmg
-        self.gold = gold
-        self.lvl = lvl
-        self.exp = exp
-        self.max_exp = max_exp
-        self.potki = potki
-
     def start_text():
         start = '''
 
