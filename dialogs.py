@@ -1,4 +1,5 @@
 import random, time
+from save_with_db import Save
 
 class Texts():
     def start_text():
@@ -65,3 +66,22 @@ class Texts():
             self.hp = self.maxhp
         else:
             print('Sorry but you do not have enough gold')
+
+    def character_menu(character, name):
+        menu = '''
+    1   -   Check character list
+    2   -   Save Progress
+    3   -   Loading Save
+    '''
+        print(menu)
+        menu_option = int(input('Select what to do: '))
+        if menu_option == 1:
+            Save.check_character()
+        elif menu_option == 2:
+            Save.save_progress(character, name)
+        elif menu_option == 3:
+            Save.check_character()
+            loadin_name = input('What is your loading character name? ')
+            Save.loading_character(character, loadin_name)
+        else:
+            print('Dont have this option')
