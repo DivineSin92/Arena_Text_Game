@@ -3,11 +3,17 @@ from dialogs import Texts
 from shell_game import Shell
 from shop import Shop
 from fighting_system import Fighting
+from save_with_db import Save
 
 #-----------------------------------------------------------------#
+Save.create_table()
+Save.check_character()
+
 Texts.start_text()
 class_select = int(input('Select your class: '))
 character = Classes.class_select_f(class_select)
+name = input('Tell me your name')
+Save.create_character(character, name)
 
 while character.hp>0:
     #-------------------------Path-------------------------#
@@ -48,7 +54,7 @@ while character.hp>0:
 
     #-------------------------Load-------------------------#
     elif road_to == 9:
-      pass
+      Texts.character_menu(character, name)
 
     #-------------------------Exit-------------------------#
     elif road_to == 10:
